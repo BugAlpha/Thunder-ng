@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="https://github.com/BugAlpha/Thunder-ng/raw/main/logo.png" />
-</p>
 # Thunder-ng
 A Multi purpose hacking tools easy to use and oriented towards Pentesters and Bug Bounty Hunters
 ## Usage
