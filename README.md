@@ -4,7 +4,7 @@ A Multi purpose hacking tools easy to use and oriented towards Pentesters and Bu
 * For debian based distros (Parrot, Kali, Ubuntu)
   * Install the following tools ** NOTE : you must have the parrotos or kali repos in ubuntu or any other debian distro for the commands to work **
     * [Lua](https://github.com/lua/lua) ```sudo apt install liblua5.4-dev -y```
-    * [luaRocks](https://luarocks.org) ```sudp apt install luarocks```
+    * [luaRocks](https://luarocks.org) ```sudo apt install luarocks```
     * [lua-http](https://daurnimator.github.io/lua-http/0.2/) ```sudo luarocks install http```
     * [NMAP](https://github.com/nmap/nmap) ```sudo apt install nmap -y```
     * [Dirb](https://github.com/v0re/dirb) ```sudo apt install dirb -y```
