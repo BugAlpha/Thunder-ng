@@ -1,0 +1,593 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML+RDFa 1.1//EN">
+<!--[if lt IE 7 ]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"  version="HTML+RDFa 1.1"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"
+  xmlns:product="http://ogp.me/ns/product#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:schema="http://schema.org/"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js lt-ie9 lt-ie8" lang="en" dir="ltr"  version="HTML+RDFa 1.1"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"
+  xmlns:product="http://ogp.me/ns/product#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:schema="http://schema.org/"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js lt-ie9" lang="en" dir="ltr"  version="HTML+RDFa 1.1"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"
+  xmlns:product="http://ogp.me/ns/product#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:schema="http://schema.org/"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" dir="ltr"  version="HTML+RDFa 1.1"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"
+  xmlns:product="http://ogp.me/ns/product#"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:schema="http://schema.org/"> <!--<![endif]-->
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-title" content="Ophea.net" />
+<link rel="apple-touch-icon-precomposed" href="sites/all/themes/de_html5/images/mobile-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="sites/all/themes/de_html5/images/mobile-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="sites/all/themes/de_html5/images/mobile-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="sites/all/themes/de_html5/images/mobile-icon-144x144.png" />
+<link rel="alternate" type="application/rss+xml" title="Ophea.net RSS" href="https://www.ophea.net/rss.xml" />
+<link rel="shortcut icon" href="https://www.ophea.net/sites/all/themes/de_html5/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes" />
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '284672005324465');
+fbq('track', 'PageView');
+</script>
+<noscript><img height='1' width='1' style='display:none' src='https://www.facebook.com/tr?id=284672005324465&ev=PageView&noscript=1' /></noscript>
+<!-- End Facebook Pixel Code -->
+  <title>Ophea.net</title>
+  <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Roboto:300,400,500,700" rel="stylesheet">
+  <style type="text/css" media="all">
+@import url("https://www.ophea.net/modules/system/system.base.css?r8yix8");
+@import url("https://www.ophea.net/modules/system/system.menus.css?r8yix8");
+@import url("https://www.ophea.net/modules/system/system.messages.css?r8yix8");
+@import url("https://www.ophea.net/modules/system/system.theme.css?r8yix8");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.ophea.net/sites/default/modules/views_slideshow/views_slideshow.css?r8yix8");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.ophea.net/sites/all/modules/adaptive_image/css/adaptive-image.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/modules/date/date_api/date.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/modules/date/date_popup/themes/datepicker.1.7.css?r8yix8");
+@import url("https://www.ophea.net/sites/default/modules/dismiss/css/dismiss.base.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/modules/field_hidden/field_hidden.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/modules/logintoboggan/logintoboggan.css?r8yix8");
+@import url("https://www.ophea.net/modules/node/node.css?r8yix8");
+@import url("https://www.ophea.net/modules/search/search.css?r8yix8");
+@import url("https://www.ophea.net/modules/user/user.css?r8yix8");
+@import url("https://www.ophea.net/modules/forum/forum.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/modules/views/css/views.css?r8yix8");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.ophea.net/sites/all/modules/colorbox/styles/default/colorbox_style.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/modules/ctools/css/ctools.css?r8yix8");
+@import url("https://www.ophea.net/sites/default/modules/video/css/video.css?r8yix8");
+@import url("https://www.ophea.net/sites/default/modules/flexslider/assets/css/flexslider_img.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/libraries/flexslider/flexslider.css?r8yix8");
+@import url("https://www.ophea.net/modules/locale/locale.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/modules/custom_search/custom_search.css?r8yix8");
+@import url("https://www.ophea.net/sites/default/modules/hide_submit/css/hide_submit.css?r8yix8");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.ophea.net/sites/all/themes/de_html5/lib/formalize/css/formalize.css?r8yix8");
+</style>
+<style type="text/css" media="print">
+@import url("https://www.ophea.net/sites/all/themes/de_html5/css/print.css?r8yix8");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.ophea.net/sites/all/themes/omega/omega/css/omega-forms.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/themes/omega/omega/css/omega-visuals.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/themes/de_html5/css/global.css?r8yix8");
+</style>
+
+<!--[if (lt IE 9)&(!IEMobile)]>
+<style type="text/css" media="all">
+@import url("https://www.ophea.net/sites/all/themes/de_html5/css/de-html5-alpha-default.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/themes/de_html5/css/de-html5-alpha-default-normal.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/themes/omega/alpha/css/grid/alpha_default/normal/alpha-default-normal-12.css?r8yix8");
+</style>
+<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<style type="text/css" media="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">
+@import url("https://www.ophea.net/sites/all/themes/de_html5/css/de-html5-alpha-default.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/themes/de_html5/css/de-html5-alpha-default-narrow.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/themes/omega/alpha/css/grid/alpha_default/narrow/alpha-default-narrow-12.css?r8yix8");
+</style>
+<!--<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<style type="text/css" media="all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)">
+@import url("https://www.ophea.net/sites/all/themes/de_html5/css/de-html5-alpha-default.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/themes/de_html5/css/de-html5-alpha-default-normal.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/themes/omega/alpha/css/grid/alpha_default/normal/alpha-default-normal-12.css?r8yix8");
+</style>
+<!--<![endif]-->
+
+<!--[if gte IE 9]><!-->
+<style type="text/css" media="all and (min-width: 1220px)">
+@import url("https://www.ophea.net/sites/all/themes/de_html5/css/de-html5-alpha-default.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/themes/de_html5/css/de-html5-alpha-default-wide.css?r8yix8");
+@import url("https://www.ophea.net/sites/all/themes/omega/alpha/css/grid/alpha_default/wide/alpha-default-wide-12.css?r8yix8");
+</style>
+<!--<![endif]-->
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+document.cookie = 'adaptive_image=' + Math.max(screen.width, screen.height) + '; path=/';
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.ophea.net/sites/default/files/js/js_VJ3ESSJ7BRMYDLAPeRimrcdV2X_nX53_wmd6bFOJpfQ.js"></script>
+<script type="text/javascript" src="https://www.ophea.net/sites/default/files/js/js_GWcEO5pfTXmxg87fAexBpcfyd8S18afH-5OPejW8o_k.js"></script>
+<script type="text/javascript" src="https://www.ophea.net/sites/default/files/js/js_Pt8xz04wKShzwpdQxge2dCtCu3uW1oFG9HHLUkwLMEw.js"></script>
+<script type="text/javascript" src="https://www.ophea.net/sites/default/files/js/js_ObFaORW1XWR9s3H04KkkIp-1J1r7IgGK-Gqc-tIdX3I.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-19401704-1", {"cookieDomain":"auto"});ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.ophea.net/sites/all/themes/de_html5/js/active_offer.js?r8yix8"></script>
+<script type="text/javascript" src="https://www.ophea.net/sites/all/themes/de_html5/js/jquery.neosmart.fb.wall.js?r8yix8"></script>
+<script type="text/javascript" src="https://www.ophea.net/sites/default/files/js/js_0GcdFqxNcN7yrbYyTOC-EeZUXIAfC0gAf1trD3o9ghY.js"></script>
+<script type="text/javascript" src="https://www.ophea.net/sites/default/files/js/js_BNM2y_C4M2ArccKxS3eLs2iZ2MyphbcpmNTWpO8HWKU.js"></script>
+<script type="text/javascript" src="https://www.ophea.net/sites/default/files/js/js_TWKm9-6PK6lnTvWvkAb3sZE01kZEDuEoVWsRRP4CQw0.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"de_html5","theme_token":"LL3A-9RyqTW-2zcy_iynaz-DQ_t6OxFKBVHsPVCAwvk","js":{"0":1,"sites\/default\/modules\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/default\/modules\/views_slideshow\/js\/views_slideshow.js":1,"misc\/form.js":1,"sites\/all\/modules\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/default\/modules\/dismiss\/js\/dismiss.js":1,"sites\/default\/modules\/_echidna_custom\/hsc_autoupload\/js\/hsc_autoupload.js":1,"sites\/default\/modules\/_commerce\/visualization\/js\/visualization.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.js":1,"sites\/default\/modules\/_echidna_custom\/ophea_mbookmark\/js\/jqm-mobile-bookmark-bubble\/bookmark_bubble.js":1,"sites\/default\/modules\/_echidna_custom\/ophea_mbookmark\/js\/mbookmark.js":1,"sites\/default\/modules\/_echidna_custom\/ophea_mbookmark\/js\/mbookmark_msg_en.js":1,"sites\/default\/modules\/video\/js\/video.js":1,"sites\/all\/modules\/custom_search\/js\/custom_search.js":1,"sites\/all\/libraries\/flexslider\/jquery.flexslider-min.js":1,"sites\/default\/modules\/flexslider_views_slideshow\/js\/flexslider_views_slideshow.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"1":1,"sites\/all\/themes\/de_html5\/js\/active_offer.js":1,"sites\/all\/themes\/de_html5\/js\/jquery.neosmart.fb.wall.js":1,"sites\/default\/modules\/hide_submit\/js\/hide_submit.js":1,"sites\/all\/themes\/de_html5\/js\/modernizr.js":1,"sites\/all\/themes\/de_html5\/js\/jquery.horizontalNav.js":1,"sites\/all\/themes\/de_html5\/js\/tinynav.min.js":1,"sites\/all\/themes\/de_html5\/js\/general.js":1,"sites\/all\/themes\/de_html5\/lib\/formalize\/js\/jquery.formalize.min.js":1,"sites\/all\/themes\/omega\/omega\/js\/omega-mediaqueries.js":1,"sites\/all\/themes\/omega\/omega\/js\/omega-equalheights.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/default\/modules\/views_slideshow\/views_slideshow.css":1,"sites\/all\/modules\/adaptive_image\/css\/adaptive-image.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/default\/modules\/dismiss\/css\/dismiss.base.css":1,"sites\/all\/modules\/field_hidden\/field_hidden.css":1,"sites\/all\/modules\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/colorbox\/styles\/default\/colorbox_style.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/default\/modules\/video\/css\/video.css":1,"sites\/default\/modules\/flexslider\/assets\/css\/flexslider_img.css":1,"sites\/all\/libraries\/flexslider\/flexslider.css":1,"modules\/locale\/locale.css":1,"sites\/all\/modules\/custom_search\/custom_search.css":1,"sites\/default\/modules\/hide_submit\/css\/hide_submit.css":1,"sites\/all\/themes\/de_html5\/lib\/formalize\/css\/formalize.css":1,"sites\/all\/themes\/de_html5\/css\/print.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-forms.css":1,"sites\/all\/themes\/omega\/omega\/css\/omega-visuals.css":1,"sites\/all\/themes\/de_html5\/css\/global.css":1,"ie::normal::sites\/all\/themes\/de_html5\/css\/de-html5-alpha-default.css":1,"ie::normal::sites\/all\/themes\/de_html5\/css\/de-html5-alpha-default-normal.css":1,"ie::normal::sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1,"narrow::sites\/all\/themes\/de_html5\/css\/de-html5-alpha-default.css":1,"narrow::sites\/all\/themes\/de_html5\/css\/de-html5-alpha-default-narrow.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/narrow\/alpha-default-narrow-12.css":1,"normal::sites\/all\/themes\/de_html5\/css\/de-html5-alpha-default.css":1,"normal::sites\/all\/themes\/de_html5\/css\/de-html5-alpha-default-normal.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/normal\/alpha-default-normal-12.css":1,"wide::sites\/all\/themes\/de_html5\/css\/de-html5-alpha-default.css":1,"wide::sites\/all\/themes\/de_html5\/css\/de-html5-alpha-default-wide.css":1,"sites\/all\/themes\/omega\/alpha\/css\/grid\/alpha_default\/wide\/alpha-default-wide-12.css":1}},"admin_menu":{"suppress":1},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"ophea_mbookmark":{"install_text":"Install this app:"},"custom_search":{"form_target":"_self","solr":0},"hsc_forms":{"goBack":"GO BACK"},"viewsSlideshow":{"slider-block_1":{"methods":{"goToSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"nextSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","flexsliderViewsSlideshow"],"pause":["viewsSlideshowControls","flexsliderViewsSlideshow"],"play":["viewsSlideshowControls","flexsliderViewsSlideshow"],"previousSlide":["viewsSlideshowPager","viewsSlideshowSlideCounter","flexsliderViewsSlideshow"],"transitionBegin":["viewsSlideshowPager","viewsSlideshowSlideCounter"],"transitionEnd":[]},"paused":0}},"flexslider_views_slideshow":{"#flexslider_views_slideshow_main_slider-block_1":{"num_divs":5,"id_prefix":"#flexslider_views_slideshow_main_","vss_id":"slider-block_1","namespace":"flex-","selector":".slides \u003E li","easing":"swing","direction":"horizontal","reverse":false,"smoothHeight":false,"startAt":0,"animationSpeed":600,"initDelay":0,"useCSS":true,"touch":true,"video":false,"keyboard":true,"multipleKeyboard":false,"mousewheel":false,"controlsContainer":".flex-control-nav-container","sync":"","asNavFor":"","itemWidth":0,"itemMargin":0,"minItems":0,"maxItems":0,"move":0,"animation":"fade","slideshow":true,"slideshowSpeed":7000,"directionNav":true,"controlNav":true,"prevText":"Previous","nextText":"Next","pausePlay":false,"pauseText":"Pause","playText":"Play","randomize":false,"thumbCaptions":false,"thumbCaptionsBoth":false,"animationLoop":true,"pauseOnAction":true,"pauseOnHover":false,"manualControls":""}},"better_exposed_filters":{"views":{"slider":{"displays":{"block":{"filters":[]}}},"blog":{"displays":{"home_page_blog_block":{"filters":[]}}},"featured_product_front":{"displays":{"featured_product_front":{"filters":[]}}}}},"hide_submit":{"hide_submit_status":true,"hide_submit_method":"disable","hide_submit_css":"hide-submit-disable","hide_submit_abtext":"","hide_submit_atext":"","hide_submit_hide_css":"hide-submit-processing","hide_submit_hide_text":"Processing...","hide_submit_indicator_style":"expand-left","hide_submit_spinner_color":"#000","hide_submit_spinner_lines":12,"hide_submit_hide_fx":false,"hide_submit_reset_time":5000},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1},"urlIsAjaxTrusted":{"\/":true},"omega":{"layouts":{"primary":"normal","order":["narrow","normal","wide"],"queries":{"narrow":"all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)","normal":"all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)","wide":"all and (min-width: 1220px)"}}}});
+//--><!]]>
+</script>
+</head>
+<body class="html front not-logged-in no-sidebars page-node i18n-en">
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+  <div class="region region-page-top" id="region-page-top">
+  <div class="region-inner region-page-top-inner">
+      </div>
+</div>  <div class="page clearfix" id="page">
+      <header id="section-header" class="section section-header">
+  <div id="zone-header-wrapper" class="zone-wrapper zone-header-wrapper clearfix">  
+  <div id="zone-header" class="zone zone-header clearfix container-12">
+    <div class="grid-6 prefix-2 region region-header-first" id="region-header-first">
+  <div class="region-inner region-header-first-inner">
+    <div class="block block-menu-block block-3 block-menu-block-3 odd block-without-title" id="block-menu-block-3">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="menu-block-wrapper menu-block-3 menu-name-menu-secondary-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf has-children menu-mlid-5681"><a href="/advocacy">Advocacy</a></li>
+<li class="leaf menu-mlid-1812"><a href="/articles" title="">Articles</a></li>
+<li class="leaf menu-mlid-1899"><a href="/blogs" title="">Blog</a></li>
+<li class="leaf has-children menu-mlid-1647"><a href="/about-us">About Us</a></li>
+<li class="last leaf menu-mlid-1648"><a href="/contact-us">Contact Us</a></li>
+</ul></div>
+    </div>
+  </div>
+</div>  </div>
+</div><div class="grid-4 region region-header-second" id="region-header-second">
+  <div class="region-inner region-header-second-inner">
+    <div class="block block-locale block-language block-locale-language odd block-without-title" id="block-locale-language">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <ul class="language-switcher-locale-url"><li class="en first active"><a href="/" class="language-link active" xml:lang="en">EN</a></li><li class="fr last"><a href="/fr" class="language-link" xml:lang="fr">FR</a></li></ul>    </div>
+  </div>
+</div><div class="block block-custom-search-blocks block-1 block-custom-search-blocks-1 even block-without-title" id="block-custom-search-blocks-1">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <form class="search-form" action="/" method="post" id="custom-search-blocks-form-1" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-custom-search-blocks-form-1">
+  <label class="element-invisible" for="edit-custom-search-blocks-form-1--2">Search this site </label>
+ <input class="custom-search-default-value custom-search-box form-text" type="text" id="edit-custom-search-blocks-form-1--2" name="custom_search_blocks_form_1" value="Search" size="15" maxlength="128" />
+</div>
+<fieldset class="custom_search-popup form-wrapper" id="edit-popup"><div class="fieldset-wrapper"></div></fieldset>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Go" class="form-submit" /></div><input type="hidden" name="delta" value="1" />
+<input type="hidden" name="form_build_id" value="form-yhawmKJkj0MgDVsKHOvx5E39L7CP1yusLHQiRT-z_tE" />
+<input type="hidden" name="form_id" value="custom_search_blocks_form_1" />
+<input class="default-text" type="hidden" name="default_text" value="Search" />
+</div>
+</div></form>    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div><div id="zone-branding-wrapper" class="zone-wrapper zone-branding-wrapper clearfix">  
+  <div id="zone-branding" class="zone zone-branding clearfix container-12">
+    <div class="grid-3 region region-branding-first" id="region-branding-first">
+  <div class="region-inner region-branding-first-inner">
+    <div class="block block-delta-blocks block-branding block-delta-blocks-branding odd block-without-title" id="block-delta-blocks-branding">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="logo-img"><a href="/" id="logo" title="Return to the Ophea.net home page"><img typeof="foaf:Image" src="/sites/all/themes/de_html5/images/logo-en.png" alt="Ophea.net" /></a></div><hgroup class="site-name-slogan element-invisible"><h2 class="site-name element-invisible">Ophea.net</h2></hgroup>    </div>
+  </div>
+</div>  </div>
+</div><div class="grid-9 region region-branding-second" id="region-branding-second">
+  <div class="region-inner region-branding-second-inner">
+    <div class="block block-ophea-commerce block-user-cart block-ophea-commerce-user-cart odd block-without-title" id="block-ophea-commerce-user-cart">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <a href="/user/login">Login</a> or <a href="/user/register">Create Account</a>    </div>
+  </div>
+</div><div class="block block-block block-ophea-donate-button block-ophea-commerce contextual-links-region block-user-cart block-ophea-commerce-user-cart even block-62 block-block-62 block-without-title" id="block-block-62">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <p><a href="https://www.ophea.net/about-us/donate">Donate</a></p>
+    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div><div id="zone-menu-wrapper" class="zone-wrapper zone-menu-wrapper clearfix">  
+  <div id="zone-menu" class="zone zone-menu clearfix container-12">
+    <div class="grid-12 region region-menu" id="region-menu">
+  <div class="region-inner region-menu-inner">
+        <div class="block block-menu-block block-5 block-menu-block-5 odd block-without-title" id="block-menu-block-5">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="menu-block-wrapper menu-block-5 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-1643"><a href="/teaching-tools">Teaching Tools</a></li>
+<li class="leaf has-children menu-mlid-1644"><a href="/healthy-schools-certification">Healthy Schools Certification</a></li>
+<li class="leaf has-children menu-mlid-2422"><a href="/professional-learning">Professional Learning</a></li>
+<li class="last leaf menu-mlid-2475"><a href="/order">Order</a></li>
+</ul></div>
+    </div>
+  </div>
+</div>  </div>
+</div>
+  </div>
+</div></header>    
+      <section id="section-content" class="section section-content">
+  <div id="zone-front-row-one-wrapper" class="zone-wrapper zone-front-row-one-wrapper clearfix">  
+  <div id="zone-front-row-one" class="zone zone-front-row-one clearfix container-12">
+    <div class="grid-8 region region-front-row-one-first" id="region-front-row-one-first">
+  <div class="region-inner region-front-row-one-first-inner">
+    <div class="block block-block block-13 block-block-13 odd block-without-title" id="block-block-13">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div id="active-offer">
+<h1>Welcome  / Bienvenue</h1>
+<p><br /></p>
+<p class="modal-buttons"><a class="btn btn-custom" href="/">English</a>          <a class="btn btn-custom" href="/fr">Français</a></p>
+</div>
+    </div>
+  </div>
+</div><div class="block block-views block-slider-block block-views-slider-block even block-without-title" id="block-views-slider-block">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="view view-slider view-id-slider view-display-id-block view-dom-id-ae3e6cadb0338570368c3f72c3b580a2">
+        
+  
+  
+      <div class="view-content">
+      
+  <div class="skin-default">
+    
+    <div id="flexslider_views_slideshow_main_slider-block_1" class="flexslider_views_slideshow_main views_slideshow_main"><div class="flex-nav-container">
+  <div class="flexslider">
+    <ul id="flexslider_views_slideshow_slider-block_1" class="flexslider-views-slideshow-main-frame slides">
+        <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-1 views-row-odd">
+      
+  <div class="views-field views-field-field-slide-image">        <div class="field-content"><a class="slide-wrapper clearfix" href="https://www.ophea.net/blog/dtl16days-partner-learning-series-webinar-series-recap%E2%80%AF#.YgVRoJTMJPY">
+<img typeof="foaf:Image" src="https://www.ophea.net/sites/default/files/styles/homepage_slider/public/slider-images/mc_plmainimg_11fe22_0.jpg?itok=6yWXC21T" width="1720" height="800" alt="Woman sitting in front of a computer writing in a notebook" />
+</a></div>  </div>  
+  <div class="views-field views-field-nothing">        <span class="field-content"><span class="slide-content">
+<span class="slide-content-inner labeltitle">
+<span class="slide-label">Feature of the Month</span>
+<h2 class="slide-title">#DTL16Days Partner Learning Series: Webinar Series Recap</h2>
+<span class="slide-text"></span>
+</span>
+</span></span>  </div>  </li>
+  <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-2 views_slideshow_cycle_hidden views-row-even">
+      
+  <div class="views-field views-field-field-slide-image">        <div class="field-content"><a class="slide-wrapper clearfix" href="https://teachingtools.ophea.net/lesson-plans/outdoor-education-toolkit">
+<img typeof="foaf:Image" src="https://www.ophea.net/sites/default/files/styles/homepage_slider/public/slider-images/outdoor_ed.jpg?itok=6cy4jGTw" width="1720" height="800" alt="Two people walking on a trail of fall leaves" />
+</a></div>  </div>  
+  <div class="views-field views-field-nothing">        <span class="field-content"><span class="slide-content">
+<span class="slide-content-inner labeltitle">
+<span class="slide-label">Resource of the Month</span>
+<h2 class="slide-title">NEW! Outdoor Education Toolkit: Grades 1-8</h2>
+<span class="slide-text"></span>
+</span>
+</span></span>  </div>  </li>
+  <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-3 views_slideshow_cycle_hidden views-row-odd">
+      
+  <div class="views-field views-field-field-slide-image">        <div class="field-content"><a class="slide-wrapper clearfix" href="https://teachingtools.ophea.net/activities/50-fitness-activity-gifs">
+<img typeof="foaf:Image" src="https://www.ophea.net/sites/default/files/styles/homepage_slider/public/slider-images/mc_chickenjack_12ja22.png?itok=CwTxsy4C" width="1720" height="800" alt="&quot;&quot;" />
+</a></div>  </div>  
+  <div class="views-field views-field-nothing">        <span class="field-content"><span class="slide-content">
+<span class="slide-content-inner labeltitle">
+<span class="slide-label">Activity of the Month</span>
+<h2 class="slide-title">50 Fitness Activity GIFs</h2>
+<span class="slide-text"></span>
+</span>
+</span></span>  </div>  </li>
+  <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-4 views_slideshow_cycle_hidden views-row-even">
+      
+  <div class="views-field views-field-field-slide-image">        <div class="field-content"><a class="slide-wrapper clearfix" href="https://safety.ophea.net/">
+<img typeof="foaf:Image" src="https://www.ophea.net/sites/default/files/styles/homepage_slider/public/slider-images/mc_newyearblog_12ja22-01_0.jpg?itok=2idUWU1d" width="1720" height="800" alt="Kids stretching outside in the winter in snow gear" />
+</a></div>  </div>  
+  <div class="views-field views-field-nothing">        <span class="field-content"><span class="slide-content">
+<span class="slide-content-inner title">
+<span class="slide-label"></span>
+<h2 class="slide-title">Stay Safe this Winter with the Ontario Physical Activity Safety Standards in Education</h2>
+<span class="slide-text"></span>
+</span>
+</span></span>  </div>  </li>
+  <li class="flexslider-views-slideshow-main-frame-row flexslider_views_slideshow_slide views-row-5 views_slideshow_cycle_hidden views-row-odd">
+      
+  <div class="views-field views-field-field-slide-image">        <div class="field-content"><a class="slide-wrapper clearfix" href="https://www.asthmafriendly.ca/schools/other-resources">
+<img typeof="foaf:Image" src="https://www.ophea.net/sites/default/files/styles/homepage_slider/public/slider-images/kidsrunning.jpg?itok=5EwCkCYl" width="1720" height="800" alt="Kids running outside in a field" />
+</a></div>  </div>  
+  <div class="views-field views-field-nothing">        <span class="field-content"><span class="slide-content">
+<span class="slide-content-inner title">
+<span class="slide-label"></span>
+<h2 class="slide-title">Help Create Asthma Friendly Environments</h2>
+<span class="slide-text"></span>
+</span>
+</span></span>  </div>  </li>
+    </ul>
+  </div>
+</div></div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</div><div id="zone-front-row-two-wrapper" class="zone-wrapper zone-front-row-two-wrapper clearfix">  
+  <div id="zone-front-row-two" class="zone zone-front-row-two clearfix equal-height-container container-12">
+    <div class="grid-4 region region-front-row-two-one equal-height-element" id="region-front-row-two-one">
+  <div class="region-inner region-front-row-two-one-inner">
+    <section class="block block-views block-blog-home-page-blog-block block-views-blog-home-page-blog-block odd" id="block-views-blog-home-page-blog-block">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Ophea's Blog</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-blog view-id-blog view-display-id-home_page_blog_block view-dom-id-fea1e8ab1580dae8b3260d9706df22f0">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <h4 class="home-title">        <a href="/blog/sunset-play-beyond-label">The Sunset of Play Beyond The Label</a>  </h4>  
+  <div class="date">        Thursday, March 10, 2022  </div>  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <h4 class="home-title">        <a href="/blog/great-questions-lead-great-learning-opportunities">Great Questions Lead to Great Learning Opportunities</a>  </h4>  
+  <div class="date">        Monday, March 7, 2022  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+      
+  <h4 class="home-title">        <a href="/blog/dtl16days-partner-learning-series-webinar-series-recap%E2%80%AF">#DTL16Days Partner Learning Series: Webinar Series Recap </a>  </h4>  
+  <div class="date">        Tuesday, February 8, 2022  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div><div class="grid-4 region region-front-row-two-second equal-height-element" id="region-front-row-two-second">
+  <div class="region-inner region-front-row-two-second-inner">
+    <section class="block block-views block-56871dd7d9afee10c5c85f9c2b329b7d block-views-56871dd7d9afee10c5c85f9c2b329b7d odd" id="block-views-56871dd7d9afee10c5c85f9c2b329b7d">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Featured Product</h2>
+            
+    <div class="content clearfix">
+      <div class="view view-featured-product-front view-id-featured_product_front view-display-id-featured_product_front view-dom-id-9d896aecf4069f639e64998ebfafbe32">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div>        <h4 class="home-title"><a href="/product/activity-counts">Activity Counts</a></h4>  </div>  
+  <div class="product-thumb">        <a href="/product/activity-counts"><img typeof="foaf:Image" src="https://www.ophea.net/sites/default/files/styles/product_image_thumb/public/product-images/sp_ordertoolimage2_06ja20.jpg?itok=HLrZnDCl" width="120" height="120" alt="" /></a>  </div>  
+  <div class="product-teaser">        Activity Counts is a series of 27 activity cards that introduce fundamental math concepts and skills to students in a...  </div>  
+  <div class="product-price">        $25.95  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+  </div>
+</section>  </div>
+</div><div class="grid-4 region region-front-row-two-third equal-height-element" id="region-front-row-two-third">
+  <div class="region-inner region-front-row-two-third-inner">
+    <section class="block block-block block-8 block-block-8 odd" id="block-block-8">
+  <div class="block-inner clearfix">
+              <h2 class="block-title">Quick Links</h2>
+            
+    <div class="content clearfix">
+      <p><a class="btn btn-custom" href="https://www.ophea.net/node/7476">Health and Physical Education at Home</a></p>
+<p><a class="btn btn-custom" href="/eConnection">Sign up for eConnection</a></p>
+<p><a class="btn btn-custom" href="/order">Order Our Products</a></p>
+<p><a class="btn btn-custom" href="https://safety.ophea.net/" target="_blank">Ontario Physical Activity Safety Standards in Education</a></p>
+    </div>
+  </div>
+</section>  </div>
+</div>  </div>
+</div><div id="zone-front-row-three-wrapper" class="zone-wrapper zone-front-row-three-wrapper clearfix">  
+  <div id="zone-front-row-three" class="zone zone-front-row-three clearfix container-12">
+    <div class="grid-8 region region-front-row-three-one" id="region-front-row-three-one">
+  <div class="region-inner region-front-row-three-one-inner">
+    <section class="block block-block block-9 block-block-9 odd" id="block-block-9">
+  <div class="block-inner clearfix">
+              <h2 class="block-title"><a href="http://www.facebook.com/OpheaCanada" class="block-title-link">Ophea on Facebook</a></h2>
+            
+    <div class="content clearfix">
+      <div class="facebook-block"><div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-page" data-href="https://www.facebook.com/OpheaCanada" data-width="500" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/OpheaCanada" ><a href="https://www.facebook.com/OpheaCanada" >Ophea</a></blockquote></div></div>
+</div>    </div>
+  </div>
+</section>  </div>
+</div><div class="grid-4 region region-front-row-three-second" id="region-front-row-three-second">
+  <div class="region-inner region-front-row-three-second-inner">
+    <section class="block block-block block-30 block-block-30 odd" id="block-block-30">
+  <div class="block-inner clearfix">
+              <h2 class="block-title"><a href="http://twitter.com/opheacanada" class="block-title-link">Follow us on Twitter</a></h2>
+            
+    <div class="content clearfix">
+      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/opheacanada" data-widget-id="344934366222376961" data-border-color="#eeeeee" height="500" data-chrome="noheader nofooter transparent">Tweets by @opheacanada</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>    </div>
+  </div>
+</section>  </div>
+</div>  </div>
+</div></section>    
+  
+      <footer id="section-footer" class="section section-footer">
+    
+  <div id="zone-footer-row-one" class="zone zone-footer-row-one clearfix container-12">
+    <div class="grid-4 region region-footer-row-one-first" id="region-footer-row-one-first">
+  <div class="region-inner region-footer-row-one-first-inner">
+    <div class="block block-menu-block block-4 block-menu-block-4 odd block-without-title" id="block-menu-block-4">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="menu-block-wrapper menu-block-4 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-1643"><a href="/teaching-tools">Teaching Tools</a></li>
+<li class="leaf has-children menu-mlid-1644"><a href="/healthy-schools-certification">Healthy Schools Certification</a></li>
+<li class="leaf has-children menu-mlid-2422"><a href="/professional-learning">Professional Learning</a></li>
+<li class="last leaf menu-mlid-2475"><a href="/order">Order</a></li>
+</ul></div>
+    </div>
+  </div>
+</div>  </div>
+</div><div class="grid-4 region region-footer-row-one-second" id="region-footer-row-one-second">
+  <div class="region-inner region-footer-row-one-second-inner">
+    <div class="block block-menu-block block-10 block-menu-block-10 odd block-without-title" id="block-menu-block-10">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <div class="menu-block-wrapper menu-block-10 menu-name-menu-tertiary-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-1656"><a href="/privacy-policy">Privacy Policy</a></li>
+<li class="leaf menu-mlid-1679"><a href="/terms-use">Terms of Use</a></li>
+<li class="leaf menu-mlid-5553"><a href="/accessibility">Accessibility</a></li>
+<li class="leaf menu-mlid-1699"><a href="/store-policies">Store Policies</a></li>
+<li class="last leaf menu-mlid-7547"><a href="/ophea-login-faqs">Ophea Login FAQs</a></li>
+</ul></div>
+    </div>
+  </div>
+</div>  </div>
+</div><div class="grid-4 region region-footer-row-one-third" id="region-footer-row-one-third">
+  <div class="region-inner region-footer-row-one-third-inner">
+    <div class="block block-block block-7 block-block-7 odd block-without-title" id="block-block-7">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <p><a href="https://www.ophea.net/eConnection">Ophea's Newsletter Sign Up</a></p>
+<p style="color: #fff;"><em>Registered charity: 13001 8625 RR0001</em></p>
+    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+  
+  <div id="zone-footer-row-two" class="zone zone-footer-row-two clearfix container-12">
+    <div class="grid-8 region region-footer-row-two-first" id="region-footer-row-two-first">
+  <div class="region-inner region-footer-row-two-first-inner">
+    <div class="block block-block block-3 block-block-3 odd block-without-title" id="block-block-3">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      <a class="facebook" href="https://www.facebook.com/OpheaCanada">Facebook</a>
+<a class="twitter" href="https://twitter.com/opheacanada">Twitter</a>
+<a class="youtube" href="https://www.youtube.com/user/OpheaCanada">Youtube</a>    </div>
+  </div>
+</div>  </div>
+</div><div class="grid-4 region region-footer-row-two-second" id="region-footer-row-two-second">
+  <div class="region-inner region-footer-row-two-second-inner">
+    <div class="block block-block block-1 block-block-1 odd block-without-title" id="block-block-1">
+  <div class="block-inner clearfix">
+                
+    <div class="content clearfix">
+      &copy;  Ophea &middot; All Rights Reserved    </div>
+  </div>
+</div>  </div>
+</div>  </div>
+</footer>  </div>  <div class="region region-page-bottom" id="region-page-bottom">
+  <div class="region-inner region-page-bottom-inner">
+    
+    <script src="//static.getclicky.com/js" type="text/javascript"></script>
+    <script type="text/javascript">try { clicky.init(100582127); }catch(e){}</script>
+    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100582127ns.gif" /></p></noscript>
+
+  </div>
+</div></body>
+</html>

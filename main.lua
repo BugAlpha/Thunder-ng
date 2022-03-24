@@ -44,6 +44,8 @@ function help()
 		print("-exp 	| Search For available exploits based on version numbers scans")
 		print("--hidden | Search for hidden content usage [ lua main.lua --hidden <CMS name> ] or  [ lua main.lua --hidden raw]")
 		print("-rv      | Reverse Shell usage[ lua main.lua -rv --bypass to bypass file upload filter ] or [ -rv --generator to generate a php reverse shell]")
+		print("-cms     | Cms stuff usage [ lua main.lua -cms --detect to detect cms used in the target ]")
+
 	end
 end
 -- Search for exploits available
@@ -168,7 +170,7 @@ function cms_detect()
 						if string.len(wp_grepOutput) > 0 then -- I konw it seems like a lot but i'm trying to make the code readble
 								found_wp = true
 							else
-								print("Can't find Wordpress in source code")
+								print("[-] Can't find Wordpress in source code")
 								found_wp = false
 						end
 						if found_wp == true then
@@ -181,7 +183,7 @@ function cms_detect()
 							if string.len(wp_content_grepOutput) > 0 then
 									found_wp_content = true
 								else
-									print("Can't find wp-content in source code")
+									print("[-] Can't find wp-content in source code")
 									found_wp_content = false
 							end
 							if found_wp_content == true then
@@ -190,21 +192,59 @@ function cms_detect()
 							if found_wp == false then
 								local headers, stream = assert(http_request.new_from_uri(ip .. "/robots.txt"):go())
 								print("[/\\] Requesting " .. ip .. "/robots.txt")
-								if headers:get ":status" == "200" then
+								if headers:get ":status" == "200" or headers:get ":status" == "403" then
 									print("[*] There is a robots.txt lemme fetch it")
 									robots_grep = assert(io.popen("grep wp-admin temp", "r"))
 									robots_grepOutput = assert(robots_grep:read('*all'))
 									if string.len(wp_grepOutput) > 0 then
 											found_wp_admin = true
 										else
-											print("Can't find wp-admin in robots.txt")
+											print("[-] Can't find wp-admin in robots.txt")
 											found_wp_admin = false
 									end
 									if found_wp_admin == true then
 										print("[*] Found wp-admin in the robots.txt !")
 									end
+									if found_wp_admin == false then -- Now if everything fails means that the target does not use wordpress lets switch to drupal search
+										print("[-] Can't find any hints for wordpress i will search for drupal now")
+										drupal_search_source = assert(io.popen("grep -e drupal -e Drupal temp"))
+										drupal_search_sourceOutput = assert(drupal_search_source:read('*all'))
+										if string.len(drupal_search_sourceOutput) > 0 then
+												drupal_found = true
+												print("[*] Found drupal in source code ! ")
+											else
+												drupal_found = false
+												print('[-] Cant find drupal in the source code ')
+										end
+										if drupal_found == false then
+											print("[/\\] Requesting " .. ip .."/admin")
+											local headers, stream = assert(http_request.new_from_uri(ip .. "/admin"):go())
+											if headers:get ":status" == "200" or headers:get ":status" == "403" or headers:get ":status" == "443" then
+												admin_drupal_found = true
+												print("[*] " .. ip .. " /admin is alive hints to drupal")
+											else
+												admin_drupal_found = false
+												print("[-] The /admin portal is not alive")
+											end
+										end
+										if admin_drupal_found == false then
+											print("[/\\] Requesting " .. ip .."/user/register")
+											local headers, stream = assert(http_request.new_from_uri(ip .. "/user/register"):go())
+											if headers:get ":status" == "200" or headers:get ":status" == "403" or headers:get ":status" == "443" then
+												user_register_found = true
+												print("[*] " .. ip .. "/user/register is alive hints to a drupal site")
+												else
+													user_register_found = false
+													print("[*] " .. ip .. "/user/register is not alive")
+											end
+											if  drupal_found == true or admin_drupal_found == true or user_register_found == true then
+												print("[*] Ending The target seems to use Drupal")
+												elseif found_wp == true or found_wp_admin == true or found_wp_content == true then
+														print("[*] Ending The target seems to use Wordpress")
+												end
+										end
+									end
 								end
-
 							end
 						end
 					end

@@ -22,6 +22,6 @@ Or with <code>--generate</code> you can generate a php revese shell THANKS to pe
   ```
   lua main.lua -cms --bypass
   ```
-  Right now it only search for wordpress but soon i will inculde most other cms's
+  Right now it only search for wordpress and drupal
 ## Contribute
 I will be happy to see someone post an issue or make a pull request feel free to do it anytime :) !
