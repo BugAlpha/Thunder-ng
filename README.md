@@ -1,5 +1,13 @@
 # Thunder-ng
 A Multi purpose hacking tools easy to use and oriented towards Pentesters and Bug Bounty Hunters
+## Installation
+* For debian based distros (Parrot, Kali, Ubuntu)
+  * Install the following tools
+    ** NOTE : you must have the parrotos or kali repos in ubuntu or any other debian distro for the commands to work **
+    * [NMAP] (https://github.com/nmap/nmap) ```sudo apt install nmap -y```
+    * [Dirb] (https://github.com/v0re/dirb) ```sudo apt install dirb -y```
+    * [Searchsploit] (https://github.com/andreafioraldi/cve_searchsploit) ```sudo apt install exploitdb -y```
+* Else if you are in another distro install from source and don't be lazy
 ## Features
 Note the project is still under development so bugs and error are averywhere and still it needs more features
 * Search for exploits
